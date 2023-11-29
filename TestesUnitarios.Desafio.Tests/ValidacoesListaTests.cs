@@ -94,9 +94,12 @@ public class ValidacoesListaTests
         // Act
         var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
+        // maior da lista
+        int maiorNumero = lista.Max();
+
         // Assert
         //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
-        Assert.Equal(9, resultado);
+        Assert.Equal(maiorNumero, resultado);
     }
 
     [Fact]
@@ -110,8 +113,11 @@ public class ValidacoesListaTests
         // Act
         var resultado = _validacoes.RetornarMenorNumeroLista(lista);
 
+        // Menor da lista
+        int menorNumero = lista.Min();
+
         // Assert
         //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
-        Assert.Equal(-8, resultado);
+        Assert.Equal(menorNumero, resultado);
     }
 }
