@@ -51,6 +51,7 @@ public class ValidacoesListaTests
     }
 
     //TODO: Corrigir a anotação [Fact]
+    [Fact]
     public void DeveMultiplicarOsElementosDaListaPor2()
     {
         //TODO: Implementar método de teste
@@ -61,6 +62,22 @@ public class ValidacoesListaTests
         
         // Act
         var resultado = _validacoes.MultiplicarNumerosLista(lista, 2);
+
+        // Assert
+        Assert.Equal(resultadoEsperado, resultado);
+    }
+
+    [Fact]
+     public void DeveDividirOsElementosDaListaPor2()
+    {
+        //TODO: Implementar método de teste
+
+        // Arrange
+        var lista = new List<int> { 6, 8, 8, 10 };
+        var resultadoEsperado = new List<int> { 3, 4, 4, 5 };
+        
+        // Act
+        var resultado = _validacoes.DividirNumerosLista(lista, 2);
 
         // Assert
         Assert.Equal(resultadoEsperado, resultado);

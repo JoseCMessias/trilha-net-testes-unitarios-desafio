@@ -20,6 +20,12 @@ namespace TestesUnitarios.Desafio.Console.Services
             return listaMultiplicada;
         }
 
+         public List<int> DividirNumerosLista(List<int> lista, int numero)
+        {
+            var listaDividida = lista.Select(x => x / numero).ToList();
+            return listaDividida;
+        }
+
         public int RetornarMaiorNumeroLista(List<int> lista)
         {
             return lista.Max();
